@@ -18,9 +18,8 @@ class DocApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'First Method',
         theme: ThemeData(
-          primaryColor: AppColors.mainColor,
-        scaffoldBackgroundColor: Colors.white
-        ),
+            primaryColor: AppColors.mainColor,
+            scaffoldBackgroundColor: Colors.white),
         initialRoute: Routes.onBoardingScreen,
         onGenerateRoute: appRouter.generateRoute,
       ),
