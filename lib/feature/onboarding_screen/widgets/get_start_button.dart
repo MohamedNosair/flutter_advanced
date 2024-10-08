@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/helpers/extensions.dart';
 import 'package:flutter_advance/core/routing/routes.dart';
+import 'package:flutter_advance/core/theming/app_colors.dart';
 import 'package:flutter_advance/core/theming/styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,10 +12,10 @@ class GetStartButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        context.pushNamed(Routes.homeScreen);
+        context.pushNamed(Routes.loginScreen);
       },
       style: TextButton.styleFrom(
-        backgroundColor: Colors.blue,
+        backgroundColor: AppColors.mainColor,
         foregroundColor: Colors.white,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         // minimumSize:Material ,

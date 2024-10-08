@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advance/core/helpers/spacing_helper.dart';
 import 'package:flutter_advance/core/theming/styles.dart';
 import 'package:flutter_advance/feature/onboarding_screen/widgets/docdoc_logo_name.dart';
 import 'package:flutter_advance/feature/onboarding_screen/widgets/doctor_image_and_text.dart';
@@ -21,25 +22,19 @@ class OnboardingScreen extends StatelessWidget {
             child: Column(
               children: [
                 const DocDocLogoAndName(),
-                SizedBox(
-                  height: 10.h,
-                ),
+                 heightSpace(10),
                 const DoctorImageAndText(),
-                SizedBox(
-                  height: 10.h,
-                ),
+                heightSpace(10),
                 Column(
                   children: [
                     Text(
                       textAlign: TextAlign.center,
                       'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
-                      style: TextStyles.font16grey,
+                      style: TextStyles.font13grey,
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 30.h,
-                ),
+                 heightSpace(30),
                 const GetStartButton(),
               ],
             ),
