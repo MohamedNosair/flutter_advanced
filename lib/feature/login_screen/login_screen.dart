@@ -5,6 +5,8 @@ import 'package:flutter_advance/core/theming/styles.dart';
 import 'package:flutter_advance/core/widgets/app_text_button.dart';
 import 'package:flutter_advance/core/widgets/app_text_form_field.dart';
 import 'package:flutter_advance/feature/login_screen/widgets/dont_have_account_text.dart';
+import 'package:flutter_advance/feature/login_screen/widgets/login_with_social_media.dart';
+import 'package:flutter_advance/feature/login_screen/widgets/or_sign_with_text.dart';
 import 'package:flutter_advance/feature/login_screen/widgets/term_and_conditions_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -81,6 +83,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         onPressed: () {},
                       ),
                       heightSpace(40),
+                      const OrSignWithText(),
+                      heightSpace(30),
+                      const LoginWithSocialMedia(),
+                      heightSpace(80),
                       const TermsAndConditionsText(),
                       heightSpace(20),
                       const DontHaveAccountText()
