@@ -22,6 +22,7 @@ mixin _$LoginState<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
+    required TResult Function() isShowPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$LoginState<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? isShowPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$LoginState<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
+    TResult Function()? isShowPassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$LoginState<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Succcess<T> value) success,
     required TResult Function(Error<T> value) error,
+    required TResult Function(IsShowPassword<T> value) isShowPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$LoginState<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Succcess<T> value)? success,
     TResult? Function(Error<T> value)? error,
+    TResult? Function(IsShowPassword<T> value)? isShowPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$LoginState<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Succcess<T> value)? success,
     TResult Function(Error<T> value)? error,
+    TResult Function(IsShowPassword<T> value)? isShowPassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +140,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
+    required TResult Function() isShowPassword,
   }) {
     return initial();
   }
@@ -145,6 +152,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? isShowPassword,
   }) {
     return initial?.call();
   }
@@ -156,6 +164,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
+    TResult Function()? isShowPassword,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +180,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Succcess<T> value) success,
     required TResult Function(Error<T> value) error,
+    required TResult Function(IsShowPassword<T> value) isShowPassword,
   }) {
     return initial(this);
   }
@@ -182,6 +192,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Succcess<T> value)? success,
     TResult? Function(Error<T> value)? error,
+    TResult? Function(IsShowPassword<T> value)? isShowPassword,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +204,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Succcess<T> value)? success,
     TResult Function(Error<T> value)? error,
+    TResult Function(IsShowPassword<T> value)? isShowPassword,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -251,6 +263,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
+    required TResult Function() isShowPassword,
   }) {
     return loading();
   }
@@ -262,6 +275,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? isShowPassword,
   }) {
     return loading?.call();
   }
@@ -273,6 +287,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
+    TResult Function()? isShowPassword,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -288,6 +303,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Succcess<T> value) success,
     required TResult Function(Error<T> value) error,
+    required TResult Function(IsShowPassword<T> value) isShowPassword,
   }) {
     return loading(this);
   }
@@ -299,6 +315,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Succcess<T> value)? success,
     TResult? Function(Error<T> value)? error,
+    TResult? Function(IsShowPassword<T> value)? isShowPassword,
   }) {
     return loading?.call(this);
   }
@@ -310,6 +327,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Succcess<T> value)? success,
     TResult Function(Error<T> value)? error,
+    TResult Function(IsShowPassword<T> value)? isShowPassword,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -396,6 +414,7 @@ class _$SucccessImpl<T> implements Succcess<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
+    required TResult Function() isShowPassword,
   }) {
     return success(data);
   }
@@ -407,6 +426,7 @@ class _$SucccessImpl<T> implements Succcess<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? isShowPassword,
   }) {
     return success?.call(data);
   }
@@ -418,6 +438,7 @@ class _$SucccessImpl<T> implements Succcess<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
+    TResult Function()? isShowPassword,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -433,6 +454,7 @@ class _$SucccessImpl<T> implements Succcess<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Succcess<T> value) success,
     required TResult Function(Error<T> value) error,
+    required TResult Function(IsShowPassword<T> value) isShowPassword,
   }) {
     return success(this);
   }
@@ -444,6 +466,7 @@ class _$SucccessImpl<T> implements Succcess<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Succcess<T> value)? success,
     TResult? Function(Error<T> value)? error,
+    TResult? Function(IsShowPassword<T> value)? isShowPassword,
   }) {
     return success?.call(this);
   }
@@ -455,6 +478,7 @@ class _$SucccessImpl<T> implements Succcess<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Succcess<T> value)? success,
     TResult Function(Error<T> value)? error,
+    TResult Function(IsShowPassword<T> value)? isShowPassword,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -548,6 +572,7 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
+    required TResult Function() isShowPassword,
   }) {
     return error(message);
   }
@@ -559,6 +584,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? isShowPassword,
   }) {
     return error?.call(message);
   }
@@ -570,6 +596,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
+    TResult Function()? isShowPassword,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -585,6 +612,7 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Succcess<T> value) success,
     required TResult Function(Error<T> value) error,
+    required TResult Function(IsShowPassword<T> value) isShowPassword,
   }) {
     return error(this);
   }
@@ -596,6 +624,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Succcess<T> value)? success,
     TResult? Function(Error<T> value)? error,
+    TResult? Function(IsShowPassword<T> value)? isShowPassword,
   }) {
     return error?.call(this);
   }
@@ -607,6 +636,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Succcess<T> value)? success,
     TResult Function(Error<T> value)? error,
+    TResult Function(IsShowPassword<T> value)? isShowPassword,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -626,4 +656,127 @@ abstract class Error<T> implements LoginState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$IsShowPasswordImplCopyWith<T, $Res> {
+  factory _$$IsShowPasswordImplCopyWith(_$IsShowPasswordImpl<T> value,
+          $Res Function(_$IsShowPasswordImpl<T>) then) =
+      __$$IsShowPasswordImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$IsShowPasswordImplCopyWithImpl<T, $Res>
+    extends _$LoginStateCopyWithImpl<T, $Res, _$IsShowPasswordImpl<T>>
+    implements _$$IsShowPasswordImplCopyWith<T, $Res> {
+  __$$IsShowPasswordImplCopyWithImpl(_$IsShowPasswordImpl<T> _value,
+      $Res Function(_$IsShowPasswordImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$IsShowPasswordImpl<T> implements IsShowPassword<T> {
+  const _$IsShowPasswordImpl();
+
+  @override
+  String toString() {
+    return 'LoginState<$T>.isShowPassword()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$IsShowPasswordImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() isShowPassword,
+  }) {
+    return isShowPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? isShowPassword,
+  }) {
+    return isShowPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? isShowPassword,
+    required TResult orElse(),
+  }) {
+    if (isShowPassword != null) {
+      return isShowPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Succcess<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(IsShowPassword<T> value) isShowPassword,
+  }) {
+    return isShowPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Succcess<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(IsShowPassword<T> value)? isShowPassword,
+  }) {
+    return isShowPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Succcess<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(IsShowPassword<T> value)? isShowPassword,
+    required TResult orElse(),
+  }) {
+    if (isShowPassword != null) {
+      return isShowPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class IsShowPassword<T> implements LoginState<T> {
+  const factory IsShowPassword() = _$IsShowPasswordImpl<T>;
 }

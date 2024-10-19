@@ -1,13 +1,18 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/helpers/spacing_helper.dart';
-import 'package:flutter_advance/core/theming/app_colors.dart';
 import 'package:flutter_advance/core/theming/styles.dart';
 import 'package:flutter_advance/core/widgets/app_text_button.dart';
-import 'package:flutter_advance/core/widgets/app_text_form_field.dart';
+import 'package:flutter_advance/feature/login_screen/data/models/login_request_body.dart';
+import 'package:flutter_advance/feature/login_screen/logic/login_cubit.dart';
 import 'package:flutter_advance/feature/login_screen/widgets/dont_have_account_text.dart';
+import 'package:flutter_advance/feature/login_screen/widgets/email_and_password.dart';
+import 'package:flutter_advance/feature/login_screen/widgets/login_bloc_listener.dart';
 import 'package:flutter_advance/feature/login_screen/widgets/login_with_social_media.dart';
 import 'package:flutter_advance/feature/login_screen/widgets/or_sign_with_text.dart';
 import 'package:flutter_advance/feature/login_screen/widgets/term_and_conditions_text.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -18,8 +23,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  GlobalKey formKey = GlobalKey<FormState>();
-  bool obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,55 +46,36 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyles.fontnormal14grey,
                 ),
                 heightSpace(10),
-                Form(
-                  key: formKey,
-                  child: Column(
-                    children: [
-                      const AppTextFormField(
-                        hintText: 'Email',
+                Column(
+                  children: [
+                    const EmailAndPassword(),
+                    heightSpace(24),
+                    Align(
+                      alignment: AlignmentDirectional.centerEnd,
+                      child: Text(
+                        'forgot Password ?',
+                        style: TextStyles.font13bluenormal,
                       ),
-                      heightSpace(10),
-                      AppTextFormField(
-                        hintText: 'password',
-                        obscureText: obscureText,
-                        suffixIcon: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              obscureText = !obscureText;
-                            });
-                          },
-                          child: Icon(
-                            obscureText
-                                ? Icons.visibility_off_outlined
-                                : Icons.visibility_outlined,
-                            color: AppColors.gary60,
-                          ),
-                        ),
-                      ),
-                      heightSpace(24),
-                      Align(
-                        alignment: AlignmentDirectional.centerEnd,
-                        child: Text(
-                          'forgot Password ?',
-                          style: TextStyles.font13bluenormal,
-                        ),
-                      ),
-                      heightSpace(24),
-                      AppTextButton(
-                        buttonText: 'login',
-                        textStyle: TextStyles.font16wightsemiBold,
-                        onPressed: () {},
-                      ),
-                      heightSpace(40),
-                      const OrSignWithText(),
-                      heightSpace(30),
-                      const LoginWithSocialMedia(),
-                      heightSpace(80),
-                      const TermsAndConditionsText(),
-                      heightSpace(20),
-                      const DontHaveAccountText()
-                    ],
-                  ),
+                    ),
+                    heightSpace(24),
+                    AppTextButton(
+                      buttonText: 'login',
+                      textStyle: TextStyles.font16wightsemiBold,
+                      onPressed: () {
+                        validateThenDoLogin(context);
+                      },
+                    ),
+                    heightSpace(40),
+                    const OrSignWithText(),
+                    heightSpace(30),
+                    const LoginWithSocialMedia(),
+                    heightSpace(80),
+                    const TermsAndConditionsText(),
+                    heightSpace(20),
+                    const DontHaveAccountText(),
+                    
+                    const LoginBlocListener(),
+                  ],
                 )
               ],
             ),
@@ -99,5 +83,16 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+
+  void validateThenDoLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().login(
+            LoginRequestBody(
+              email: context.read<LoginCubit>().emailController.text,
+              password: context.read<LoginCubit>().passwordController.text,
+            ),
+          );
+    }
   }
 }
