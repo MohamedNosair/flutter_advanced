@@ -8,17 +8,17 @@ class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
   LoginCubit(this._loginRepo) : super(const LoginState.initial());
 
-  var isShowPassword = true;
-  changePasswordVisibility() {
-    isShowPassword = !isShowPassword;
-    emit(const LoginState.isShowPassword());
-  }
+  // var isShowPassword = true;
+  // changePasswordVisibility() {
+  //   isShowPassword = !isShowPassword;
+  //   emit(const LoginState.isShowPassword());
+  // }
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
-  Future<void> login(LoginRequestBody loginRequestBody) async {
+  Future<void> login() async {
     emit(const LoginState.loading());
     final resposne = await _loginRepo.login(LoginRequestBody(
       email: emailController.text,

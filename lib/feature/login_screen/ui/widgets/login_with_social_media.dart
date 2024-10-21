@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/helpers/spacing_helper.dart';
-import 'package:flutter_advance/feature/login_screen/widgets/custom_social_media.dart';
+import 'package:flutter_advance/feature/login_screen/ui/widgets/custom_social_media.dart';
 
 
 class LoginWithSocialMedia extends StatelessWidget {

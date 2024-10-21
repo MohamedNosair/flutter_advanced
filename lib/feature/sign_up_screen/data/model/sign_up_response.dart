@@ -1,17 +1,17 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'login_response.g.dart';
+part 'sign_up_response.g.dart';
 //? dart run build_runner build --delete-conflicting-outputs
 
 @JsonSerializable()
-class LoginResponse {
+class SignUpResponse {
   int? code;
   bool? status;
   String? message;
   @JsonKey(name: 'data')
   UserData? userData;
-  LoginResponse({this.code, this.status, this.message, this.userData});
-  factory LoginResponse.fromJson(Map<String, dynamic> json) => _$LoginResponseFromJson(json);
+  SignUpResponse({this.code, this.status, this.message, this.userData});
+  factory SignUpResponse.fromJson(Map<String, dynamic> json) => _$SignUpResponseFromJson(json);
   
 }
 

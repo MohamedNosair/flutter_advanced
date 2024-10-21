@@ -4,7 +4,6 @@ import 'package:flutter_advance/core/helpers/spacing_helper.dart';
 import 'package:flutter_advance/core/theming/app_colors.dart';
 import 'package:flutter_advance/core/widgets/app_text_form_field.dart';
 import 'package:flutter_advance/feature/login_screen/logic/login_cubit.dart';
-import 'package:flutter_advance/feature/login_screen/widgets/password_validation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class EmailAndPassword extends StatefulWidget {
