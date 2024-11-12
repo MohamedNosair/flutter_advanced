@@ -8,7 +8,7 @@ class LoginResponse {
   int? code;
   bool? status;
   String? message;
-  @JsonKey(name: 'data')
+  @JsonKey(name: 'data' )
   UserData? userData;
   LoginResponse({this.code, this.status, this.message, this.userData});
   factory LoginResponse.fromJson(Map<String, dynamic> json) => _$LoginResponseFromJson(json);

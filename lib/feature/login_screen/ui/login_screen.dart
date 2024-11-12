@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const OrSignWithText(),
                     heightSpace(30),
                     const LoginWithSocialMedia(),
-                    heightSpace(80),
+                    heightSpace(30),
                     const TermsAndConditionsText(),
                     heightSpace(20),
                     const DontHaveAccountText(),
