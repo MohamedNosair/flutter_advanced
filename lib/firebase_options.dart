@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutter-advance-app-89a0f.firebasestorage.app',
     iosBundleId: 'com.example.flutterAdvance',
   );
+
 }
