@@ -1,16 +1,7 @@
-# flutter_advance
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# DocDoc App
+# splash screen
+![Image](https://github.com/user-attachments/assets/97d67543-0cf8-4b4e-a010-9c80025ba1ee)
+# login screen
+![Image](https://github.com/user-attachments/assets/ce810312-3f23-4055-abe3-c0b7e06e63ee)
+# create account screen
+![Image](https://github.com/user-attachments/assets/27158c9a-4a61-4de2-849c-2e41b1b42c77)
