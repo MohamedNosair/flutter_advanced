@@ -76,4 +76,25 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: Colors.white,
   );
+static TextStyle font18DarkBlueBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.darkBlue,
+  );
+ static TextStyle font12greynormal = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.normal,
+    color: AppColors.fontGreyColor,
+  );
+   static TextStyle font12bluenormal = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.normal,
+    color: AppColors.mainColor,
+  );
+  static TextStyle font18whitenormal = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.normal,
+    color: AppColors.whiteColor,
+  );
+
 }

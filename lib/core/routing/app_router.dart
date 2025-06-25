@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/di/dependency_injection.dart';
 import 'package:flutter_advance/core/routing/routes.dart';
-import 'package:flutter_advance/feature/home_screen/home_screen.dart';
+import 'package:flutter_advance/feature/home_screen/ui/home_screen.dart';
 import 'package:flutter_advance/feature/login_screen/logic/login_cubit.dart';
 import 'package:flutter_advance/feature/login_screen/ui/login_screen.dart';
 import 'package:flutter_advance/feature/onboarding_screen/onboarding_screen.dart';

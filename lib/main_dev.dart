@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 //! to build flutter apk run (flutter build apk --flavor dev -target lib/main_dev.dart )
+// mohamedn@gmail.com
+//  password: 123456789
 
 // Platform  Firebase App Id
 // android   1:317738651488:android:6531d294ba5ebf058d9805
