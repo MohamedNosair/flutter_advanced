@@ -40,7 +40,7 @@ class AppTextFormField extends StatelessWidget {
       cursorColor: AppColors.darkBlue,
       decoration: InputDecoration(
           filled: true,
-          fillColor: backgroundColor ?? AppColors.moreLightGary,
+          fillColor: backgroundColor ?? AppColors.moreLightGray,
           contentPadding: contantPadding ??
               EdgeInsets.symmetric(
                 horizontal: 15.w,

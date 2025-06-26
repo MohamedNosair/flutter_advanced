@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advance/core/helpers/spacing_helper.dart';
+import 'package:flutter_advance/feature/home_screen/ui/widgets/doctor_speciality_list_view.dart';
+import 'package:flutter_advance/feature/home_screen/ui/widgets/doctor_speciality_see_all.dart';
 import 'package:flutter_advance/feature/home_screen/ui/widgets/doctors_blue_container.dart';
+import 'package:flutter_advance/feature/home_screen/ui/widgets/doctors_list_view.dart';
 import 'package:flutter_advance/feature/home_screen/ui/widgets/home_tap_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,14 +14,18 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          // color: Colors.yellow,
           width: double.infinity,
           margin: const EdgeInsets.fromLTRB(20, 16, 20, 28),
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HomeTapBar(),
-              DoctorsBlueContainer(),
+              const HomeTapBar(),
+              const DoctorsBlueContainer(),
+              heightSpace(8),
+              const DoctorSpecialitySeeAll(),
+              heightSpace(8),
+              const DoctorSpecialityListView(),
+              const DoctorsListView(),
             ],
           ),
         ),

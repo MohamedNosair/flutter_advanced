@@ -81,10 +81,25 @@ static TextStyle font18DarkBlueBold = TextStyle(
     fontWeight: FontWeightHelper.bold,
     color: AppColors.darkBlue,
   );
+  static TextStyle font18DarkBluesemiBols = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColors.darkBlue,
+  );
  static TextStyle font12greynormal = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.normal,
     color: AppColors.fontGreyColor,
+  );
+   static TextStyle font12greymedium = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.fontGreyColor,
+  );
+  static TextStyle font12DarkBluenormal = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.normal,
+    color: AppColors.darkBlue,
   );
    static TextStyle font12bluenormal = TextStyle(
     fontSize: 12.sp,
@@ -95,6 +110,11 @@ static TextStyle font18DarkBlueBold = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeightHelper.normal,
     color: AppColors.whiteColor,
+  );
+   static TextStyle font18DarkBluesemiBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColors.darkBlue,
   );
 
 }
