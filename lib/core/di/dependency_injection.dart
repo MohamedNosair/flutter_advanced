@@ -1,6 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_advance/core/networking/api_service.dart';
 import 'package:flutter_advance/core/networking/dio_factory.dart';
+import 'package:flutter_advance/feature/home_screen/data/apis/home_api_services.dart';
+import 'package:flutter_advance/feature/home_screen/data/repos/home_repo.dart';
+import 'package:flutter_advance/feature/home_screen/logic/home_cubit.dart';
 import 'package:flutter_advance/feature/login_screen/data/repos/login_ropo.dart';
 import 'package:flutter_advance/feature/login_screen/logic/login_cubit.dart';
 import 'package:flutter_advance/feature/sign_up_screen/data/repos/sign_up_ropo.dart';
@@ -22,7 +25,11 @@ Future<void> setupGitIt() async {
   sl.registerLazySingleton<SignUpRopo>(() => SignUpRopo(sl()));
   sl.registerFactory<SignUpCubit>(() => SignUpCubit(sl()));
 
+// home screen dependency injection
+  sl.registerLazySingleton<HomeApiServices>(() => HomeApiServices(dio));
+  sl.registerLazySingleton<HomeRepo>(() => HomeRepo(sl()));
 
+  // Add more dependencies as needed
 
 }
 

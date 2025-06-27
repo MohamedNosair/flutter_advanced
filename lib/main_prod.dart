@@ -8,12 +8,13 @@ import 'firebase_options.dart';
 
 //! to build flutter apk run (flutter build apk --flavor prod -target lib/main_prod.dart )
 void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
+  setupGitIt();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  setupGitIt();
-   WidgetsFlutterBinding.ensureInitialized();
+
+  //  WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   runApp(
     DocApp(

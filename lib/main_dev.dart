@@ -14,11 +14,12 @@ import 'firebase_options.dart';
 // ios       1:317738651488:ios:1dd8de641e4757ab8d9805
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  setupGitIt();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  setupGitIt();
-   WidgetsFlutterBinding.ensureInitialized();
+ 
+  //  WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   runApp(
     DocApp(

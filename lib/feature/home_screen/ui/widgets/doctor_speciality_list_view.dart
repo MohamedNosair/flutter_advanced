@@ -1,43 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_advance/core/helpers/spacing_helper.dart';
-import 'package:flutter_advance/core/theming/app_colors.dart';
-import 'package:flutter_advance/core/theming/styles.dart';
+import 'package:flutter_advance/feature/home_screen/data/model/specialization_response_model.dart';
+import 'package:flutter_advance/feature/home_screen/ui/widgets/doctor_speciality_list_view_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class DoctorSpecialityListView extends StatelessWidget {
-  const DoctorSpecialityListView({super.key});
+  final List<SpecializationsData?>? specializationDataList;
+  const DoctorSpecialityListView({super.key, required this.specializationDataList});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 100.h,
       child: ListView.builder(
+        shrinkWrap: true,
         scrollDirection: Axis.horizontal,
-        itemCount: 10,
+        itemCount: specializationDataList?.length,
         itemBuilder: (context, index) {
-          return Padding(
-              padding: EdgeInsetsDirectional.only(
-                start: index == 0 ? 0 : 24.w,
-              ),
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 28.r,
-                    backgroundColor: AppColors.lightBlue,
-                    child: SvgPicture.asset(
-                      'assets/svgs/lamge.svg',
-                      height: 40.h,
-                      width: 40.w,
-                    ),
-                  ),
-                  heightSpace(8.h),
-                  Text(
-                    'Speciality $index',
-                    style: TextStyles.font12DarkBluenormal,
-                  ),
-                ],
-              ));
+          return DoctorSpecialityListViewItem(
+            itemIndex: index,
+            specializationData: specializationDataList?[index],
+          );
         },
       ),
     );
