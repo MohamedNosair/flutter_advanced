@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/feature/home_screen/logic/home_cubit.dart';
 import 'package:flutter_advance/feature/home_screen/logic/home_state.dart';
-import 'package:flutter_advance/feature/home_screen/ui/widgets/doctor_speciality_list_view.dart';
-import 'package:flutter_advance/feature/home_screen/ui/widgets/doctors_list_view.dart';
+import 'package:flutter_advance/feature/home_screen/ui/widgets/doctors_speciality_list_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SpecializationAndDoctorsBlocBuilder extends StatelessWidget {
-  const SpecializationAndDoctorsBlocBuilder({super.key});
+class SpecializationBlocBuilder extends StatelessWidget {
+  const SpecializationBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +20,10 @@ class SpecializationAndDoctorsBlocBuilder extends StatelessWidget {
         return state.maybeWhen(
           specializationLoading: () => setUpLoading(),
           specializationSuccess: (data) {
-            var specializationsDataList = data.specializationDataList;
+            var specializationsDataList = data;
             return setUpSuccess(specializationsDataList);
           },
-          specializationError: (errorHandler) => setUpError(errorHandler.apiErrorModel.message.toString()),
+          specializationError: (errorHandler) => setUpError(errorHandler.message.toString()),
           orElse: () => const SizedBox.shrink(
             child: Text('error'),
           ),
@@ -49,17 +48,8 @@ class SpecializationAndDoctorsBlocBuilder extends StatelessWidget {
   }
 
   Widget setUpSuccess(specializationsDataList) {
-    return Expanded(
-      child: Column(
-        children: [
-          DoctorSpecialityListView(
-            specializationDataList: specializationsDataList,
-          ),
-          DoctorsListView(
-            doctorsList: specializationsDataList?[0]?.doctorsList,
-          ),
-        ],
-      ),
+    return SpecialityListView(
+      specializationDataList: specializationsDataList,
     );
   }
 }

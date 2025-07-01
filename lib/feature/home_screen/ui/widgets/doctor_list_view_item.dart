@@ -42,9 +42,13 @@ class DoctorListViewItem extends StatelessWidget {
                   children: [
                     Icon(Icons.star, color: Colors.amber, size: 16.sp),
                     widthSpace(4.w),
-                    Text(
-                      '${doctorsData?.email ?? 'Email Not Available'} ',
-                      style: TextStyles.font12greymedium,
+                    Expanded(
+                      child: Text(
+                        '${doctorsData?.email ?? 'Email Not Available'} ',
+                        style: TextStyles.font12greymedium,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                   ],
                 ),

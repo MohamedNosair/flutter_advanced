@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/di/dependency_injection.dart';
+import 'package:flutter_advance/core/helpers/constants.dart';
+import 'package:flutter_advance/core/helpers/extensions.dart';
+import 'package:flutter_advance/core/helpers/shared_pref_helper.dart';
 import 'package:flutter_advance/core/routing/app_router.dart';
 import 'package:flutter_advance/doc_app.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,13 +15,16 @@ import 'firebase_options.dart';
 // Platform  Firebase App Id
 // android   1:317738651488:android:6531d294ba5ebf058d9805
 // ios       1:317738651488:ios:1dd8de641e4757ab8d9805
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupGitIt();
+  await chechIsLoggedInUser();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
- 
+
   //  WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   runApp(
@@ -26,4 +32,14 @@ void main() async {
       appRouter: AppRouter(),
     ),
   );
+}
+
+chechIsLoggedInUser() async {
+  String? userToken =
+      await SharedPrefHelper.getSecureStorage(SharedPrefKeys.userToken);
+  if (userToken.isNullOrEmpty()) {
+    isLoggedInUser = false;
+  } else {
+    isLoggedInUser = true;
+  }
 }

@@ -101,6 +101,11 @@ static TextStyle font18DarkBlueBold = TextStyle(
     fontWeight: FontWeightHelper.normal,
     color: AppColors.darkBlue,
   );
+  static TextStyle font12DarkBlueBold = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.darkBlue,
+  );
    static TextStyle font12bluenormal = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.normal,

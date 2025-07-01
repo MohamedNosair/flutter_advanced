@@ -13,7 +13,7 @@ class SignUpRopo {
       final response = await _apiService.register(signUpRequestBody);
       return ApiResult.success(response);
     }  catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
+      return ApiResult.failure(ApiHandlerError.handle(e));
     }
   }
 }
