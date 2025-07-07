@@ -6,4 +6,4 @@
 # create account screen
 ![Image](https://github.com/user-attachments/assets/27158c9a-4a61-4de2-849c-2e41b1b42c77)
 # home screen
-<img width="1080" height="2400" alt="Image" src="https://github.com/user-attachments/assets/0deffdb4-0118-491a-a9c6-e866b559161e" />
+![Image](https://github.com/user-attachments/assets/0deffdb4-0118-491a-a9c6-e866b559161e)
